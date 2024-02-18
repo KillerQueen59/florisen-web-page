@@ -1,0 +1,38 @@
+{
+  "editor.formatOnSave": true,
+  "workbench.editor.enablePreview": true,
+  "javascript.suggest.names": true,
+  "editor.hover.enabled": true,
+  "search.exclude": {
+    "**/.idea": true,
+    "**/.next": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/yarn-error.log": true,
+    "**/yarn.lock": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": true,
+  "eslint.run": "onType",
+  "editor.codeActionsOnSave": [
+    "source.organizeImports",
+    "source.fixAll.eslint"
+  ],
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "[json]": {
+    "files.insertFinalNewline": true
+  },
+  "[jsonc]": {
+    "files.insertFinalNewline": true,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.tabSize": 2,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -1,3 +1,155 @@
+// ESLint variable explanation:
+// 0 : off
+// 1 : warn
+// 2 : error
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:jest/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "jest",
+    "react",
+    "import",
+    "react-hooks",
+    "testing-library",
+    "@typescript-eslint"
+  ],
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "jest": true
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "@typescript-eslint/no-unused-vars": 0,
+        "@typescript-eslint/naming-convention": 0,
+        "@typescript-eslint/no-var-requires": 0,
+        "no-unused-vars": 2,
+        "react/prop-types": 0,
+        "jest/no-mocks-import": 0,
+        "import/no-unresolved": 0
+      }
+    },
+    {
+      "files": [
+        "**/server.js",
+        "**/*.config.js",
+        "**/*.config.ts",
+        "**/script/**/*.js",
+        "**/scripts/**/*.js",
+        "**/*.test.js",
+        "**/*.test.ts",
+        "**/*.test.tsx"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": 0
+      }
+    }
+  ],
+  "rules": {
+    "no-debugger": 2,
+    "guard-for-in": 0,
+    "linebreak-style": 0,
+    "no-plusplus": [
+      1,
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-restricted-syntax": 0,
+    "no-console": 1,
+    "no-empty": 2,
+    "no-shadow": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-labels": 2,
+    "no-lonely-if": 2,
+    "no-redeclare": 2,
+    "prettier/prettier": 1,
+    "radix": [1, "as-needed"],
+    "import/prefer-default-export": 0,
+    "import/no-cycle": 0,
+    // "react/no-unknown-property": 1,
+    "react/button-has-type": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-curly-newline": 0,
+    "react/require-default-props": 0,
+    "react/static-property-placement": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/naming-convention": [
+      2,
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-shadow": 0,
+    // We love airbnb style guide but we don't want any of the a11y rules.
+    "jsx-a11y/accessible-emoji": 0,
+    "jsx-a11y/alt-text": 0,
+    "jsx-a11y/anchor-has-content": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/aria-activedescendant-has-tabindex": 0,
+    "jsx-a11y/aria-props": 0,
+    "jsx-a11y/aria-proptypes": 0,
+    "jsx-a11y/aria-role": 0,
+    "jsx-a11y/aria-unsupported-elements": 0,
+    "jsx-a11y/autocomplete-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/control-has-associated-label": 0,
+    "jsx-a11y/heading-has-content": 0,
+    "jsx-a11y/html-has-lang": 0,
+    "jsx-a11y/iframe-has-title": 0,
+    "jsx-a11y/img-redundant-alt": 0,
+    "jsx-a11y/interactive-supports-focus": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/lang": 0,
+    "jsx-a11y/media-has-caption": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "jsx-a11y/no-access-key": 0,
+    "jsx-a11y/no-autofocus": 0,
+    "jsx-a11y/no-distracting-elements": 0,
+    "jsx-a11y/no-interactive-element-to-noninteractive-role": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": 0,
+    "jsx-a11y/no-noninteractive-tabindex": 0,
+    "jsx-a11y/no-onchange": 0,
+    "jsx-a11y/no-redundant-roles": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/role-has-required-aria-props": 0,
+    "jsx-a11y/role-supports-aria-props": 0,
+    "jsx-a11y/scope": 0,
+    "jsx-a11y/tabindex-no-positive": 0
+  },
+  "settings": {}
 }
